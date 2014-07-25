@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <!-- [START head_html] -->
+  <head>
+        <meta charset=”utf-8”> 
+    <title>Team 4</title>
+    <link href="../static/bootstrap.css" rel="stylesheet">
+    <link href="../static/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+    <title>Page of DMCM ヅ</title>
+    <style>
+      table{border-spacing: 50px;}
+
+    #container{
+      width: 1024px;
+      margin: 0 auto;
+      height: 100%;
+      background: #2d87d4;
+      box-shadow: 0px 5px 30px black;
+
+    }
+
+    #imgs {
+      box-shadow: 0px 5px 30px black;
+    }
+
+    #sizes{
+      width:80px; 
+      height:80px;
+    }
+
+    </style>
+
+  </head>
+  <!-- [END head_html] -->
+  <body id="container" style="margin:0 auto; padding:0px; background: url('http://mohamadstudio.com/wp-content/uploads/2013/05/1.jpg')"> 
+      <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <form class="navbar-form pull-left">
+               <ul class="nav navbar-nav" role="tablist">
+                <li class="active"><a href="/">Home</a></li></ul>
+                 <ul class="nav navbar-nav navbar-left">
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Student
+                    <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/student/new">Add a Student Information</a></li>
+                        <li><a href="/student/list">View the List</a></li>
+                    </ul></li>
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Adviser
+                    <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/adviser/new">Add an Adviser Information</a></li>
+                        <li><a href="/adviser/list">View the Adviser List</a></li>
+                    </ul></li>
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Thesis
+                    <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="/thesis/new">Add a Theses Information</a></li>
+                      <li><a href="/thesis/list">View the Thesis List</a></li>
+                    </ul></li>
+                  </ul>
+              </ul>
+            </form>
+            <form class="navbar-form pull-right">
+<a class="btn btn-success btn-large" href="{{ url|safe }}">{{ url_linktext }}</a>
+            </form>
+      </div>
+    </div></div>
+<table width="100%" style="height:100%; color:gray" cellpadding="5" cellspacing="5px" border="0" >
+  
+   <p>
+    <div style="position:relative">
+    <td colspan="2" style="height:50px;" >
+      <!--<img src="http://goo.gl/TiOBTi" height="200" width="100%" style="position:relative;"> -->
+    <img id ="imgs" style="position:relative; left:10px; top:40px;" src="http://goo.gl/XOHvjE" height="160" width="160">
+    </td>
+  </div></p>
+  </tr>
+
+
+  	<tr>
+		<td colspan="2" valign="middle" height="30" float="left">
+			
+			<!--<h1 style="position:absolute; left:400px; top:150px; color:#F8F8F8; size:3px">Diana Mae C. Mayores</h3>
+			<h2 style="position:absolute; left:400px; top:190px; color:#F8F8F8">BSCpE V-5</h2>
+      <h4 style="position:absolute; left:400px; top:190px; color:#F8F8F8">Member 2 of Team 4</h4> -->
+
+      <h1 style="position:absolute; left:350px; top:70px; color:#F8F8F8; size:3px">Diana Mae C. Mayores</h3>
+      <h5 style="position:absolute; left:350px; top:130px; color:#F8F8F8">Member 2 of Team 4</h5>
+		</td>
+	</tr>
+
+<tr>
+    <td width="40%" valign="top" align="center" style="padding-left:0px; color:#707070">
+			<h4 style="color:violet; padding-top:10px">	
+				<font face="Plamo" size="5px">TAGLINE/QUOTATIONS</font>
+			</h4> <font color="#989898">
+			   <b>
+        Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program. <br> <i>-Linus Torvalds</i></b> <br> <br>
+        <b>I loved logic, math, computer programming. I loved systems and logic approaches. And so I just figured architecture is this perfect combination. <br> <i>-Maya Lin</i></b>
+
+    	
+    		<h4 style="color:violet">
+				<font face="Plamo" size="5px">ABOUT ME</font>
+			</h4>	<font color="#989898" align="left"><b>			
+				I'm Diana Mae C. Mayores and I'm a fifth year student. I love color violet but I didn't like to show it. I love HTML because I believe this is the language that will enhance your creativity and logical ability. I know a bit of python and the basic of Java since it's part of our curriculum for the past years. <br><br> My goal is to become one of the best engineers in the Silicon Valley and I want to be an inspiration for the lower years and for the aspiring computer engineers.:></b></font>
+			
+			<h4 style="color:violet">
+				<font face="Plamo" size="5px">CONTACT INFORMATION</font>
+        
+			</h4><font color="#989898" align="left">
+				<b>Mobile: +63 935 290 9064
+				<br>Yahoo mail: dianamaemayores@yahoo.com
+				<br> Google mail: akoposidmcm@gmail.com </font>
+      </b>
+			<h4 style="color:Violet">
+				<font face="Plamo" size="5px">Social Networking Links</font>
+			</h4>
+				<a href="https://www.facebook.com/deeyahnahbeybe"> <img id="sizes" src="https://www.facebook.com/images/fb_icon_325x325.png"> </a>
+
+				<a href="https://twitter.com/anaideamseroyam"> <img id="sizes" src="http://img1.wikia.nocookie.net/__cb20121018102426/community-sitcom/images/3/3d/Twitterlogo.png"> </a>
+				
+				<a href="https://plus.google.com/u/0/+DianaMaeMayores/posts"> <img id="sizes" src="http://goo.gl/x4INv7"> </a>
+				
+				<a href="http://instagram.com/deeeyahnah"> <img id="sizes" src="http://scottkleinberg.com/wp-content/uploads/2014/03/instagram-logo-kgo.png"> </a> <br><br>
+
+        <a href="http://www.codecademy.com/dianamayores"><img id="sizes" src="http://www.everythingwasmade.com/wp-content/uploads/2014/03/code.png"></a>
+
+        <a href="http://www.linkedin.com/profile/view?id=346795201&trk=nav_responsive_tab_profile"><img id="sizes"src="http://societenoba.com/here/wp-content/uploads/2014/06/linkedin.png"></a>
+
+        <a href="https://github.com/dianamayores"><img id="sizes" src="http://cdns2.freepik.com/free-photo/github-logo_318-10832.jpg"></a>
+    </td>
+
+    <td width="60%" valign="top" align="center" style="padding-right:100; padding-left:500; color:black">
+    	<form><b>
+    	 	<font face="PunchDrunkLove" style="color:violet" size="4px">
+    	 		Post your comments here! ✰ <br>
+    	 	<font face="verdana" style="color:black" size="1px">
+    	 		Note: This message will be seen in public! ;)
+    	 	</font>
+    	 	</font></b>
+      	<!--<input value="{{ guestbook_name }}" name="guestbook_name">
+      	<input type="submit" value="switch"> -->
+    	</form><br<br>
+    
+    	<form action="/sign2?guestbook_name={{ guestbook_name }}" method="post">
+      		<div>
+      			<textarea name="content" rows="3" cols="60"></textarea>
+      		</div>
+      		
+      		<div>
+      			<input type="Submit" value="Surrender this comment">
+      		</div>
+    	</form>
+
+      	<h1>
+      	<font face="GoldenSkies"><b style="color:#330066">********</b><br></font>
+      	</h1>
+    		{% for greeting in greetings %}
+      		{% if greeting.author %}
+        	<b style="color:#99FFCC">{{ greeting.author.nickname() }} wrote:</b>
+      		{% else %}
+       		<i style="color: #99FFCC">An anonymous person wrote:</i>
+      		{% endif %}
+      		<blockquote>{{ greeting.content }}</blockquote>
+    		{% endfor %}
+  	</td>
+</tr>
+ <script src="../static/jquery.js"></script>
+    <script src="../static/bootstrap-transition.js"></script>
+    <script src="../static/bootstrap-alert.js"></script>
+    <script src="../static/bootstrap-modal.js"></script>
+    <script src="../static/bootstrap-dropdown.js"></script>
+    <script src="../static/bootstrap-scrollspy.js"></script>
+    <script src="../static/bootstrap-tab.js"></script>
+    <script src="../static/bootstrap-tooltip.js"></script>
+    <script src="../static/bootstrap-popover.js"></script>
+    <script src="../static/bootstrap-button.js"></script>
+    <script src="../static/bootstrap-collapse.js"></script>
+    <script src="../static/bootstrap-carousel.js"></script>
+    <script src="../static/bootstrap-typeahead.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../static/dist/js/bootstrap.min.js"></script>
+    <script src="../static/assets/js/docs.min.js"></script>
+  </body>
+</html>
+{% endautoescape %}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset=”utf-8”> 
+    <title>Team 4</title>
+    <link href="../static/bootstrap.css" rel="stylesheet">
+    <link href="../static/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        color: black;
+        background: #fff;
+      }
+    </style>
+  </head>
+
+  <body style="background-color:#202020">
+
+    <table width="50%" style="height:100%; color:#C0C0C0;" border="1" align="center">
+
+<tr>
+    <td width="90%" valign="top" style="color:#707070; margin:10px">
+        
+ {% for student in student_all %}
+        {% if id == student.key.id()%}
+            <font color="black"><div style="padding-top:25px">
+              <center><font face="Maiandra GD">This is the information of <font color="orange" style="text-transform:uppercase;"><h1>{{student.first_name}} {{student.last_name}}</h1></font></font></center>
+            </div>
+            <div>
+              <center><font face="Maiandra GD">Student number: <font color="orange">{{student.student_number}}</font></font></center>
+            </div>
+            <div>
+              <center><font face="Maiandra GD">Department: <font color="orange">{{student.department}}</font></font></center>
+            </div>
+            
+            <div>
+              <center><font face="Maiandra GD">Contact Information: <i>(Email) </i><font color="orange">{{student.email}}</font></font></center>
+            </div>
+
+            <div>
+              <center><font face="Maiandra GD">Remarks: <font color="orange">{{student.remarks}}</font></font></center>
+            </div>
+          </font>
+            {% endif %}{% endfor %} <br><br><br>
+
+      </table>
+    </td>
+
+    <td width="10%" align="center" valign="top"><br><br>
+            <center>
+            <p> <h5>
+              <a class="btn btn-warning btn-xs" href="/student/list" style="color:gold"><font face="Maiandra GD">BACK TO LIST</a><br>
+              <font face="Maiandra GD" color="#FF3300">Choose one from the choices below for another transaction</font><br>
+              <font face="Maiandra GD" color="black" size="2px">Thesis, Student, Adviser and Home</font><br>
+              <a href="/thesis/homepage"><img src="http://www.graphicsfuel.com/wp-content/uploads/2012/03/folder-icon-512x512.png" width="50px" height="50px"></a>
+              <a href="/student/homepage"><img src="http://www2.psd100.com/ppp/2013/10/0401/Female-students-Icon-1004150944.png" width="50px" height="50px"></a>
+              <a href="/adviser/homepage"><img src="http://www2.psd100.com/ppp/2013/10/0401/Female-teacher-Icon-1004150749.png" width="50px" height="50px"></a>
+              <a  href="/"><img src="http://www2.psd100.com/ppp/2013/10/0401/user-home-icon-1004171822.png" width="50px" height="50px"></a>
+            </p>
+          </center> 
+    </td>
+</tr> 
+         
+  </body>
+</html>

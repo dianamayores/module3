@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset=”utf-8”> 
+    <title>Team 4</title>
+    <link href="../static/bootstrap.css" rel="stylesheet">
+    <link href="../static/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        color: black;
+        background: #fff;
+      }
+    </style>
+  </head>
+
+   <body style="background-color:#202020">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <form class="navbar-form pull-left">
+               <ul class="nav navbar-nav" role="tablist">
+                <li class="active"><a href='/'>Home</a></li></ul>
+                 <ul class="nav navbar-nav navbar-left">
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Student
+                    <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/student/new">Add a Student Information</a></li>
+                        <li><a href="/student/list">View the List</a></li>
+                    </ul></li>
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Adviser
+                    <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/adviser/new">Add an Adviser Information</a></li>
+                        <li><a href="/adviser/list">View the Adviser List</a></li>
+                    </ul></li>
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Thesis
+                    <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="/thesis/new">Add a Theses Information</a></li>
+                      <li><a href="/thesis/list">View the Thesis List</a></li>
+                    </ul></li>
+                  </ul>
+              </ul>
+            </form>
+            <form class="navbar-form pull-right">
+            <a class="btn btn-success btn-large" href="{{ url|safe }}">{{ url_linktext }}</a>
+          </form>
+      </div>
+    </div>
+  </div>
+
+    <table width="100%" style="height:100%; color:gray;" class="ex1">
+
+<tr>
+    <td width="90%" valign="top" style="color:#707070; margin:10px">
+      <h4 >
+        <font size="10px" color="#FF9900" face="Giddyup Std">Student List</font>
+      </h4> <font color="#989898"> 
+      
+        <table class="table table-hover col-xs-12 col-md-8" style="padding-left:50px">        
+        <tr align="center">
+          <td><font size="3px" align="center" style="text-transform:uppercase">NAME</font></td>
+          <td><font size="3px" align="center" style="text-transform:uppercase">STUDENT NUMBER</font></td>
+          <td><font size="3px" align="center" style="text-transform:uppercase">DEPARTMENT</font></td>
+          <td><font size="3px" align="center" style="text-transform:uppercase">EMAIL ADDRESS</font></td>
+          <td><font size="3px" align="center" style="text-transform:uppercase">REMARKS</font></td>
+          <td><font size="3px" align="center" style="text-transform:uppercase">Options</font></td>
+          
+        </tr>
+        {% for student in student_all%}
+        <tr>
+          <td>{{student.first_name}} {{student.last_name}}</td>
+          <td>{{student.student_number}}</td>
+          <td>{{student.department}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.remarks}}</td>
+          <td><a class="btn btn-primary btn-danger btn-xs" href="/student/view/{{student.key.id()}}">VIEW</a> or
+          <a class="btn btn-primary btn-danger btn-xs" href="/student/edit/{{student.key.id()}}">EDIT</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+      </table>
+    </td>
+
+    <td width="10%" align="center" valign="top" class="col-xs-6 col-md-4"><br><br>
+      <!--<form><b><br><br>
+        <font style="color:gold" size="5px" face="Giddyup Std">
+          Leave a Message!
+        </font></b>
+        <!--<input value="{{ guestbook_name }}" name="guestbook_name">
+        <input type="submit" value="switch">
+      </form>-->
+    
+      <form action="/sign5?guestbook_name={{ guestbook_name }}" method="post" >
+          <div>
+            <textarea name="content" rows="3" cols="60" placeholder="Write your comment here.."></textarea>
+          </div>
+          
+          <div><br>
+            <input type="Submit" value="Submit this">
+          </div>
+      </form>
+      <font color="orange" size="3px">✰✰✰✰✰</font>
+<br>
+        {% for greeting in greetings %}
+          {% if greeting.author %}
+          <b style="color:#FF9966">{{ greeting.author.nickname() }} wrote:</b>
+          {% else %}
+          <i style="color:#FF3300">An anonymous person wrote:</i>
+          {% endif %}
+          <blockquote>{{ greeting.content }}</blockquote>
+        {% endfor %}
+    </td>
+</tr>
+
+<!--END-->
+
+    </div></div>
+ <script src="../static/jquery.js"></script>
+    <script src="../static/bootstrap-transition.js"></script>
+    <script src="../static/bootstrap-alert.js"></script>
+    <script src="../static/bootstrap-modal.js"></script>
+    <script src="../static/bootstrap-dropdown.js"></script>
+    <script src="../static/bootstrap-scrollspy.js"></script>
+    <script src="../static/bootstrap-tab.js"></script>
+    <script src="../static/bootstrap-tooltip.js"></script>
+    <script src="../static/bootstrap-popover.js"></script>
+    <script src="../static/bootstrap-button.js"></script>
+    <script src="../static/bootstrap-collapse.js"></script>
+    <script src="../static/bootstrap-carousel.js"></script>
+    <script src="../static/bootstrap-typeahead.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../static/dist/js/bootstrap.min.js"></script>
+    <script src="../static/assets/js/docs.min.js"></script>
+  </body>
+</html>
